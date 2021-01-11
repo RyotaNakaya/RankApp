@@ -23,7 +23,7 @@ class Rank {
     class func fetchAll() -> Array<Rank> {
         var ranks: [Rank] = []
 //        とりあえず固定で返す
-        for i in 1...10 {
+        for i in 1...20 {
             let rank = Rank(id: i)
             ranks.append(rank)
         }

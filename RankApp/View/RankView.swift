@@ -1,5 +1,5 @@
 //
-//  RankListView.swift
+//  RankView.swift
 //  RankApp
 //
 //  Created by 中屋亮太 on 2020/12/07.
@@ -8,23 +8,27 @@
 
 import SwiftUI
 
-struct RankListView: View {
+struct RankView: View {
     let items = RankController.fetchAll()
     var body: some View {
         VStack {
             NavigationView {
                 List() {
                     ForEach(0 ..< items.count) { i in
-                        NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) { Text(self.items[i].name) }
+                        NavigationLink(destination: RankContentView(rankId: self.items[i].id)) { Text(self.items[i].name) }
                     }
                 }.navigationBarTitle("RnakingList")
+            }
+            Spacer()
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Text("追加")
             }
         }
     }
 }
 
-struct RankListView_Previews: PreviewProvider {
+struct RankView_Previews: PreviewProvider {
     static var previews: some View {
-        RankListView()
+        RankView()
     }
 }
