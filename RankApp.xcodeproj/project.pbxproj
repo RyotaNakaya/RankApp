@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A450E25C25BD6C0300DFFA5F /* AddRankModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A450E25B25BD6C0300DFFA5F /* AddRankModal.swift */; };
 		A467147125AC5D2F00B9B735 /* RankContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467147025AC5D2F00B9B735 /* RankContentController.swift */; };
 		A467147325AC5D6000B9B735 /* RankContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467147225AC5D6000B9B735 /* RankContent.swift */; };
 		A4E92F34257D2BD6008A78DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E92F33257D2BD6008A78DD /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A450E25B25BD6C0300DFFA5F /* AddRankModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRankModal.swift; sourceTree = "<group>"; };
 		A467147025AC5D2F00B9B735 /* RankContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankContentController.swift; sourceTree = "<group>"; };
 		A467147225AC5D6000B9B735 /* RankContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankContent.swift; sourceTree = "<group>"; };
 		A4E92F30257D2BD6008A78DD /* RankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 			children = (
 				A4E92F4A257E6BA3008A78DD /* RankContentView.swift */,
 				A4E92F4C257E7266008A78DD /* RankView.swift */,
+				A450E25B25BD6C0300DFFA5F /* AddRankModal.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E92F5125861AA5008A78DD /* RankController.swift in Sources */,
+				A450E25C25BD6C0300DFFA5F /* AddRankModal.swift in Sources */,
 				A4E92F4D257E7266008A78DD /* RankView.swift in Sources */,
 				A4E92F4F25825088008A78DD /* Rank.swift in Sources */,
 				A4E92F4B257E6BA3008A78DD /* RankContentView.swift in Sources */,

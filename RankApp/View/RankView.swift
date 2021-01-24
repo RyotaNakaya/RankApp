@@ -10,6 +10,8 @@ import SwiftUI
 
 struct RankView: View {
     let items = RankController.fetchAll()
+    @State private var showingAddRankModal = false
+
     var body: some View {
         VStack {
             NavigationView {
@@ -20,8 +22,12 @@ struct RankView: View {
                 }.navigationBarTitle("RnakingList")
             }
             Spacer()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: {
+                self.showingAddRankModal.toggle()
+            }) {
                 Text("追加")
+            }.sheet(isPresented: $showingAddRankModal){
+                AddRankModal()
             }
         }
     }
