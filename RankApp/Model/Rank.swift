@@ -7,24 +7,26 @@
 //
 
 import Foundation
+import Firebase
 
 class Rank {
 
-    let id: Int
+    let id: String
     let name: String
     let dispOrder: Int
     
-    init(id: Int) {
+    init(id: String) {
         self.id = id
-        self.name = "rank" + String(id)
-        self.dispOrder = id
+        self.name = "rank_" + id
+        self.dispOrder = 1
     }
     
     class func fetchAll() -> Array<Rank> {
         var ranks: [Rank] = []
+
 //        とりあえず固定で返す
         for i in 1...20 {
-            let rank = Rank(id: i)
+            let rank = Rank(id: String(i))
             ranks.append(rank)
         }
         return ranks

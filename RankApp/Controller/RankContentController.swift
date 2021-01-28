@@ -9,7 +9,7 @@
 import Foundation
 
 class RankContentController {
-    class func fetchAllByRankId(rankId: Int) -> Array<RankContent> {
+    class func fetchAllByRankId(rankId: String) -> Array<RankContent> {
         return RankContent.fetchAllByRankId(rankId: rankId)
     }
 }

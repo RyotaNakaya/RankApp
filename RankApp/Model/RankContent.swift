@@ -10,23 +10,23 @@ import Foundation
 
 class RankContent {
 
-    let id: Int
-    var rankId: Int
+    let id: String
+    var rankId: String
     let name: String
     let dispOrder: Int
     
-    init(id: Int, rankId: Int) {
+    init(id: String, rankId: String) {
         self.id = id
         self.rankId = rankId
         self.name = "rank_contents" + String(id)
-        self.dispOrder = id
+        self.dispOrder = 1
     }
     
-    class func fetchAllByRankId(rankId: Int) -> Array<RankContent> {
+    class func fetchAllByRankId(rankId: String) -> Array<RankContent> {
         var contents: [RankContent] = []
 //        とりあえず固定で返す
         for i in 1...5 {
-            let content = RankContent(id: i, rankId: rankId)
+            let content = RankContent(id: String(i), rankId: rankId)
             contents.append(content)
         }
         return contents

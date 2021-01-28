@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct RankContentView: View {
-    var rankId:Int = 0
+    var rankId:String = ""
     var items: Array<RankContent>
 
-    init(rankId: Int) {
+    init(rankId: String) {
         self.rankId = rankId
         items = RankContentController.fetchAllByRankId(rankId: rankId)
     }
@@ -32,6 +32,6 @@ struct RankContentView: View {
 
 struct RankContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RankContentView(rankId: 0)
+        RankContentView(rankId: "")
     }
 }
