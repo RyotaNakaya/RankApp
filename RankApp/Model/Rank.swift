@@ -9,7 +9,18 @@
 import Foundation
 import Firebase
 
-class Rank {
+class RankList: ObservableObject {
+    @Published var rankList: [Rank]
+    init() {
+        self.rankList = []
+        // fetchAll 後にクロージャで rankList を更新する
+        _ = Rank.fetchAllAsync(completion: { (res: [Rank]) in
+            self.rankList = res
+        })
+    }
+}
+
+class Rank: ObservableObject {
 
     let id: String
     let name: String
@@ -21,14 +32,24 @@ class Rank {
         self.dispOrder = 1
     }
     
-    class func fetchAll() -> Array<Rank> {
+    class func fetchAllAsync(completion: @escaping ([Rank])->()) {
         var ranks: [Rank] = []
+        let db = Firestore.firestore()
 
-//        とりあえず固定で返す
-        for i in 1...20 {
-            let rank = Rank(id: String(i))
-            ranks.append(rank)
+        db.collection("ranks").getDocuments { (snap, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            if let snap = snap {
+                for document in snap.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    ranks.append(Rank(id: document.documentID))
+                }
+            }
+
+            // 引数のクロージャの実行
+            completion(ranks)
         }
-        return ranks
     }
 }

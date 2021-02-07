@@ -9,8 +9,9 @@
 import Foundation
 
 
-class RankController {
-    class func fetchAll() -> Array<Rank> {
-        return Rank.fetchAll()
-    }
-}
+//class RankController {
+//    class func fetchAll() -> Array<Rank> {
+//        return Rank.fetchAll()
+//        return []
+//    }
+//}

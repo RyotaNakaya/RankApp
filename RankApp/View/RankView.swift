@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct RankView: View {
-    let items = RankController.fetchAll()
+    @ObservedObject var items = RankList()
     @State private var showingAddRankModal = false
 
     var body: some View {
         VStack {
             NavigationView {
                 List() {
-                    ForEach(0 ..< items.count) { i in
-                        NavigationLink(destination: RankContentView(rankId: self.items[i].id)) { Text(self.items[i].name) }
+                    ForEach(0 ..< items.rankList.count, id: \.self) { i in
+                        NavigationLink(destination: RankContentView(rankId: self.items.rankList[i].id)) { Text(self.items.rankList[i].name) }
                     }
                 }.navigationBarTitle("RnakingList")
             }

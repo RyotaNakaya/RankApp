@@ -25,9 +25,9 @@
 		A450E2A325BF05AB00DFFA5F /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A450E27E25BF053A00DFFA5F /* nanopb.framework */; };
 		A450E2A525BF05AB00DFFA5F /* PromisesObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A450E27D25BF053A00DFFA5F /* PromisesObjC.framework */; };
 		A450E2A925BF06B600DFFA5F /* FirebaseFirestore.framework in Resources */ = {isa = PBXBuildFile; fileRef = A450E26425BF050C00DFFA5F /* FirebaseFirestore.framework */; };
-		A450E2AB25BF0CAB00DFFA5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A450E2AA25BF0CAB00DFFA5F /* GoogleService-Info.plist */; };
 		A467147125AC5D2F00B9B735 /* RankContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467147025AC5D2F00B9B735 /* RankContentController.swift */; };
 		A467147325AC5D6000B9B735 /* RankContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467147225AC5D6000B9B735 /* RankContent.swift */; };
+		A49775C225C6FBD400C70E4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A450E2AA25BF0CAB00DFFA5F /* GoogleService-Info.plist */; };
 		A4D5352F25C0599800361419 /* gRPC-C++.framework in Resources */ = {isa = PBXBuildFile; fileRef = A4D5352E25C0599800361419 /* gRPC-C++.framework */; };
 		A4E92F34257D2BD6008A78DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E92F33257D2BD6008A78DD /* AppDelegate.swift */; };
 		A4E92F36257D2BD6008A78DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E92F35257D2BD6008A78DD /* SceneDelegate.swift */; };
@@ -79,7 +79,7 @@
 		A450E28225BF053A00DFFA5F /* FirebaseInstallations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = "<group>"; };
 		A450E28325BF053A00DFFA5F /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
 		A450E28425BF053A00DFFA5F /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
-		A450E2AA25BF0CAB00DFFA5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A450E2AA25BF0CAB00DFFA5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A467147025AC5D2F00B9B735 /* RankContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankContentController.swift; sourceTree = "<group>"; };
 		A467147225AC5D6000B9B735 /* RankContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankContent.swift; sourceTree = "<group>"; };
 		A4D5352E25C0599800361419 /* gRPC-C++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-C++.framework"; path = "Carthage/Build/iOS/gRPC-C++.framework"; sourceTree = "<group>"; };
@@ -327,9 +327,9 @@
 				A4D5352F25C0599800361419 /* gRPC-C++.framework in Resources */,
 				A450E2A925BF06B600DFFA5F /* FirebaseFirestore.framework in Resources */,
 				A4E92F40257D2BD7008A78DD /* LaunchScreen.storyboard in Resources */,
-				A450E2AB25BF0CAB00DFFA5F /* GoogleService-Info.plist in Resources */,
 				A4E92F3D257D2BD7008A78DD /* Preview Assets.xcassets in Resources */,
 				A4E92F3A257D2BD7008A78DD /* Assets.xcassets in Resources */,
+				A49775C225C6FBD400C70E4F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
