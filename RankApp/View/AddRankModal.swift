@@ -19,7 +19,10 @@ struct AddRankModal: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             HStack(spacing: 40) {
-                Button(action: {}) {
+                Button(action: {
+                    Rank(name: self.name).save()
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
                     Text("add")
                 }
 

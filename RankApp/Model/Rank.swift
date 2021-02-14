@@ -26,9 +26,9 @@ class Rank: ObservableObject {
     let name: String
     let dispOrder: Int
     
-    init(id: String) {
+    init(id: String = "", name: String) {
         self.id = id
-        self.name = "rank_" + id
+        self.name = name
         self.dispOrder = 1
     }
     
@@ -44,12 +44,27 @@ class Rank: ObservableObject {
             if let snap = snap {
                 for document in snap.documents {
                     print("\(document.documentID) => \(document.data())")
-                    ranks.append(Rank(id: document.documentID))
+                    ranks.append(Rank(id: document.documentID, name: document.data()["name"] as! String))
                 }
             }
 
             // 引数のクロージャの実行
             completion(ranks)
         }
+    }
+
+    func save() {
+        let db = Firestore.firestore()
+        var ref: DocumentReference? = nil
+        ref = db.collection("ranks").addDocument(data: [
+            "name": self.name
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+
     }
 }
