@@ -38,7 +38,6 @@
 		A4E92F4B257E6BA3008A78DD /* RankContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E92F4A257E6BA3008A78DD /* RankContentView.swift */; };
 		A4E92F4D257E7266008A78DD /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E92F4C257E7266008A78DD /* RankView.swift */; };
 		A4E92F4F25825088008A78DD /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E92F4E25825088008A78DD /* Rank.swift */; };
-		A4E92F5125861AA5008A78DD /* RankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E92F5025861AA5008A78DD /* RankController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,7 +93,6 @@
 		A4E92F4A257E6BA3008A78DD /* RankContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankContentView.swift; sourceTree = "<group>"; };
 		A4E92F4C257E7266008A78DD /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		A4E92F4E25825088008A78DD /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
-		A4E92F5025861AA5008A78DD /* RankController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +238,6 @@
 		A4E92F47257D2D99008A78DD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4E92F5025861AA5008A78DD /* RankController.swift */,
 				A467147025AC5D2F00B9B735 /* RankContentController.swift */,
 			);
 			path = Controller;
@@ -340,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E92F5125861AA5008A78DD /* RankController.swift in Sources */,
 				A450E25C25BD6C0300DFFA5F /* AddRankModal.swift in Sources */,
 				A4E92F4D257E7266008A78DD /* RankView.swift in Sources */,
 				A4E92F4F25825088008A78DD /* Rank.swift in Sources */,
