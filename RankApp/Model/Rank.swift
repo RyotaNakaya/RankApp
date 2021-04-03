@@ -14,7 +14,7 @@ class RankList: ObservableObject {
     init() {
         self.rankList = []
         // fetchAll 後にクロージャで rankList を更新する
-        _ = Rank.fetchAllAsync(completion: { (res: [Rank]) in
+        Rank.fetchAllAsync(completion: { (res: [Rank]) in
             self.rankList = res
         })
     }

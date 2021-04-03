@@ -11,6 +11,7 @@ import SwiftUI
 struct RankContentView: View {
     var rankId:String = ""
     var items: Array<RankContent>
+    @State private var showingAddRankContentModal = false
 
     init(rankId: String) {
         self.rankId = rankId
@@ -25,6 +26,14 @@ struct RankContentView: View {
                        Text(self.items[i].name)
                     }
                 }
+            }
+            Spacer()
+            Button(action: {
+                self.showingAddRankContentModal.toggle()
+            }) {
+                Text("コンテンツ追加")
+            }.sheet(isPresented: $showingAddRankContentModal){
+                AddRankContentModal(rankId: rankId)
             }
         }
     }

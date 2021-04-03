@@ -25,7 +25,7 @@ struct RankView: View {
             Button(action: {
                 self.showingAddRankModal.toggle()
             }) {
-                Text("追加")
+                Text("ランキング追加")
             }.sheet(isPresented: $showingAddRankModal){
                 AddRankModal()
             }
