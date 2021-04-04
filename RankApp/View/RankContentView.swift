@@ -10,20 +10,20 @@ import SwiftUI
 
 struct RankContentView: View {
     var rankId:String = ""
-    var items: Array<RankContent>
+    @ObservedObject var items: RankContentList
     @State private var showingAddRankContentModal = false
 
     init(rankId: String) {
         self.rankId = rankId
-        items = RankContentController.fetchAllByRankId(rankId: rankId)
+        items = RankContentList(rankId: rankId)
     }
     
     var body: some View {
         VStack {
             List() {
                 Section(header: Text("Rnaking_" + String(self.rankId))) {
-                    ForEach(0 ..< items.count) { i in
-                       Text(self.items[i].name)
+                    ForEach(0 ..< items.rankContentList.count) { i in
+                        Text(self.items.rankContentList[i].name)
                     }
                 }
             }
