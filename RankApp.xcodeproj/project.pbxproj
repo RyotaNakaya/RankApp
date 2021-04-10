@@ -25,7 +25,6 @@
 		A450E2A325BF05AB00DFFA5F /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A450E27E25BF053A00DFFA5F /* nanopb.framework */; };
 		A450E2A525BF05AB00DFFA5F /* PromisesObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A450E27D25BF053A00DFFA5F /* PromisesObjC.framework */; };
 		A450E2A925BF06B600DFFA5F /* FirebaseFirestore.framework in Resources */ = {isa = PBXBuildFile; fileRef = A450E26425BF050C00DFFA5F /* FirebaseFirestore.framework */; };
-		A467147125AC5D2F00B9B735 /* RankContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467147025AC5D2F00B9B735 /* RankContentController.swift */; };
 		A467147325AC5D6000B9B735 /* RankContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467147225AC5D6000B9B735 /* RankContent.swift */; };
 		A46BBE752618A84D008AAFE0 /* AddRankContentModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46BBE742618A84C008AAFE0 /* AddRankContentModal.swift */; };
 		A49775C225C6FBD400C70E4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A450E2AA25BF0CAB00DFFA5F /* GoogleService-Info.plist */; };
@@ -80,7 +79,6 @@
 		A450E28325BF053A00DFFA5F /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
 		A450E28425BF053A00DFFA5F /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		A450E2AA25BF0CAB00DFFA5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A467147025AC5D2F00B9B735 /* RankContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankContentController.swift; sourceTree = "<group>"; };
 		A467147225AC5D6000B9B735 /* RankContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankContent.swift; sourceTree = "<group>"; };
 		A46BBE742618A84C008AAFE0 /* AddRankContentModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRankContentModal.swift; sourceTree = "<group>"; };
 		A4D5352E25C0599800361419 /* gRPC-C++.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-C++.framework"; path = "Carthage/Build/iOS/gRPC-C++.framework"; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 		A4E92F32257D2BD6008A78DD /* RankApp */ = {
 			isa = PBXGroup;
 			children = (
-				A4E92F47257D2D99008A78DD /* Controller */,
 				A4E92F49257D2DB2008A78DD /* View */,
 				A4E92F48257D2DA1008A78DD /* Model */,
 				A4E92F33257D2BD6008A78DD /* AppDelegate.swift */,
@@ -235,14 +232,6 @@
 				A4E92F3C257D2BD7008A78DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A4E92F47257D2D99008A78DD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				A467147025AC5D2F00B9B735 /* RankContentController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		A4E92F48257D2DA1008A78DD /* Model */ = {
@@ -346,7 +335,6 @@
 				A4E92F4B257E6BA3008A78DD /* RankContentView.swift in Sources */,
 				A467147325AC5D6000B9B735 /* RankContent.swift in Sources */,
 				A4E92F34257D2BD6008A78DD /* AppDelegate.swift in Sources */,
-				A467147125AC5D2F00B9B735 /* RankContentController.swift in Sources */,
 				A46BBE752618A84D008AAFE0 /* AddRankContentModal.swift in Sources */,
 				A4E92F36257D2BD6008A78DD /* SceneDelegate.swift in Sources */,
 				A4E92F38257D2BD6008A78DD /* ContentView.swift in Sources */,
