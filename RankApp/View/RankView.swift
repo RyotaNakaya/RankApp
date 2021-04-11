@@ -17,7 +17,8 @@ struct RankView: View {
             NavigationView {
                 List() {
                     ForEach(0 ..< items.rankList.count, id: \.self) { i in
-                        NavigationLink(destination: RankContentView(rankId: self.items.rankList[i].id)) { Text(self.items.rankList[i].name) }
+                        let item = self.items.rankList[i]
+                        NavigationLink(destination: RankContentView(rankId: item.id, rankName: item.name)) { Text(item.name) }
                     }
                 }.navigationBarTitle("RnakingList")
             }

@@ -10,18 +10,20 @@ import SwiftUI
 
 struct RankContentView: View {
     var rankId:String = ""
+    var rankName:String = ""
     @ObservedObject var items: RankContentList
     @State private var showingAddRankContentModal = false
 
-    init(rankId: String) {
+    init(rankId: String, rankName: String) {
         self.rankId = rankId
+        self.rankName = rankName
         items = RankContentList(rankId: rankId)
     }
     
     var body: some View {
         VStack {
             List() {
-                Section(header: Text("Rnaking_" + String(self.rankId))) {
+                Section(header: Text(self.rankName)) {
                     ForEach(0 ..< items.rankContentList.count) { i in
                         Text(self.items.rankContentList[i].name)
                     }
@@ -49,6 +51,6 @@ struct RankContentView: View {
 
 struct RankContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RankContentView(rankId: "")
+        RankContentView(rankId: "", rankName: "")
     }
 }
