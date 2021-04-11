@@ -26,7 +26,15 @@ struct RankView: View {
                 self.showingAddRankModal.toggle()
             }) {
                 Text("ランキング追加")
-            }.sheet(isPresented: $showingAddRankModal){
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
+                    .foregroundColor(Color.white)
+                    .frame(height: 32.0)
+                    .padding(.horizontal, 32)
+                    .background(Color.blue)
+                    .cornerRadius(8.0)
+            }.padding(.bottom, 8.0)
+            .sheet(isPresented: $showingAddRankModal){
                 AddRankModal()
             }
         }

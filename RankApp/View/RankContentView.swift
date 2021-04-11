@@ -32,7 +32,15 @@ struct RankContentView: View {
                 self.showingAddRankContentModal.toggle()
             }) {
                 Text("コンテンツ追加")
-            }.sheet(isPresented: $showingAddRankContentModal){
+                    .fontWeight(.bold)
+                    .font(.system(size: 20))
+                    .foregroundColor(Color.white)
+                    .frame(height: 32.0)
+                    .padding(.horizontal, 32)
+                    .background(Color.blue)
+                    .cornerRadius(8.0)
+            }.padding(.bottom, 8.0)
+            .sheet(isPresented: $showingAddRankContentModal){
                 AddRankContentModal(rankId: rankId)
             }
         }

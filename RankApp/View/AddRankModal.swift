@@ -24,12 +24,26 @@ struct AddRankModal: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("add")
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                        .foregroundColor(Color.white)
+                        .frame(height: 32.0)
+                        .padding(.horizontal, 16)
+                        .background(Color.blue)
+                        .cornerRadius(8.0)
                 }
 
                 Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("cancel")
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                        .foregroundColor(Color.white)
+                        .frame(height: 32.0)
+                        .padding(.horizontal, 16)
+                        .background(Color.gray)
+                        .cornerRadius(8.0)
                 }
             }
         }
