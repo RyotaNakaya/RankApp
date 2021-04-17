@@ -24,8 +24,9 @@ struct RankContentView: View {
         VStack {
             List() {
                 Section(header: Text(self.rankName)) {
-                    ForEach(0 ..< items.rankContentList.count) { i in
-                        Text(self.items.rankContentList[i].name)
+                    let list = self.items.rankContentList
+                    ForEach(0 ..< list.count, id: \.self) { i in
+                        Text(list[i].name)
                     }
                 }
             }

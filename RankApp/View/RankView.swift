@@ -11,6 +11,7 @@ import SwiftUI
 struct RankView: View {
     @ObservedObject var items = RankList()
     @State private var showingAddRankModal = false
+    @State private var isDisplayAddRankButton = true
 
     var body: some View {
         VStack {
@@ -18,25 +19,32 @@ struct RankView: View {
                 List() {
                     ForEach(0 ..< items.rankList.count, id: \.self) { i in
                         let item = self.items.rankList[i]
-                        NavigationLink(destination: RankContentView(rankId: item.id, rankName: item.name)) { Text(item.name) }
+                        NavigationLink(destination: RankContentView(rankId: item.id, rankName: item.name)
+                                        .onAppear(perform: {self.isDisplayAddRankButton = false})
+                                        .onDisappear(perform: {self.isDisplayAddRankButton = true})
+                        ){
+                            Text(item.name)
+                        }
                     }
                 }.navigationBarTitle("RnakingList")
             }
             Spacer()
-            Button(action: {
-                self.showingAddRankModal.toggle()
-            }) {
-                Text("ランキング追加")
-                    .fontWeight(.bold)
-                    .font(.system(size: 20))
-                    .foregroundColor(Color.white)
-                    .frame(height: 32.0)
-                    .padding(.horizontal, 32)
-                    .background(Color.blue)
-                    .cornerRadius(8.0)
-            }.padding(.bottom, 8.0)
-            .sheet(isPresented: $showingAddRankModal){
-                AddRankModal()
+            if isDisplayAddRankButton {
+                Button(action: {
+                    self.showingAddRankModal.toggle()
+                }) {
+                    Text("ランキング追加")
+                        .fontWeight(.bold)
+                        .font(.system(size: 20))
+                        .foregroundColor(Color.white)
+                        .frame(height: 32.0)
+                        .padding(.horizontal, 32)
+                        .background(Color.blue)
+                        .cornerRadius(8.0)
+                }.padding(.bottom, 8.0)
+                .sheet(isPresented: $showingAddRankModal){
+                    AddRankModal()
+                }
             }
         }
     }
