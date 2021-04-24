@@ -27,7 +27,7 @@ struct RankContentView: View {
                     let list = self.items.rankContentList
                     ForEach(0 ..< list.count, id: \.self) { i in
                         Text(list[i].name)
-                    }
+                    }.onDelete(perform: self.deleteContent)
                 }
             }
             Spacer()
@@ -47,6 +47,11 @@ struct RankContentView: View {
                 AddRankContentModal(rankId: rankId)
             }
         }
+    }
+    
+    func deleteContent(offsets: IndexSet) {
+        self.items.rankContentList.remove(atOffsets: offsets)
+        // TODO firestore から削除
     }
 }
 
