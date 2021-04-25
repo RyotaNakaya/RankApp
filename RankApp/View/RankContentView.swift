@@ -50,8 +50,13 @@ struct RankContentView: View {
     }
     
     func deleteContent(offsets: IndexSet) {
+        // datastore から削除
+        if let index: Int = offsets.first {
+            let rc = self.items.rankContentList[index]
+            rc.delete()
+        }
+        // 表示を更新する
         self.items.rankContentList.remove(atOffsets: offsets)
-        // TODO firestore から削除
     }
 }
 

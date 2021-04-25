@@ -68,6 +68,16 @@ class RankContent {
                 print("Document added with ID: \(ref!.documentID)")
             }
         }
+    }
 
+    func delete() {
+        let db = Firestore.firestore()
+        db.collection("rank_contents").document(self.id).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
     }
 }
